@@ -1,3 +1,3 @@
-export default function CardList({children}) {
+export default function CardList({ children }) {
   return <div>{children}</div>;
 }
