@@ -5,6 +5,7 @@ import "./Style.css";
 
 export default function Home() {
   const [tipList, setTipList] = useState([]);
+  console.log(tipList);
 
   return (
     <div>

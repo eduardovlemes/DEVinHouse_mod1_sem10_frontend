@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function SideBar({ tipList, setTipList }) {
+export default function SideBar( { tipList, setTipList }) {
   /* console.log(tip); */
 
   const [tip, setTip] = useState({
@@ -11,8 +11,9 @@ export default function SideBar({ tipList, setTipList }) {
     video: "",
   });
 
-  function saveTips() {
-    const tipWithID = { ...tip.id(Math.random()) };
+  function saveTips(event) {
+    event.preventDefault()
+    const tipWithID = {...tip,id:(Math.random())};
     setTipList([...tipList, tipWithID]);
   }
 

@@ -22,7 +22,7 @@ export default function TipCard({
       <div id="button-new-tips">
         <button id="button-new-tip-edit">Edit</button>
         <button id="button-new-tip-delete">Delete</button>
-        <a href={video} target="_blank" id="button-new-tip-video">
+        <a href={video} /* target="_blank"  */id="button-new-tip-video">
           Video
         </a>
       </div>
