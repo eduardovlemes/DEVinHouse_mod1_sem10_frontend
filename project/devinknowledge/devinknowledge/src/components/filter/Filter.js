@@ -1,4 +1,11 @@
+import { useState } from "react";
+
 export default function Filter() {
+  const[filter,setFilter] = useState(null)
+
+ 
+
+
   return (
     <div>
       <div id="search-space">
@@ -6,11 +13,13 @@ export default function Filter() {
           type="text"
           id="input-search"
           placeholder="Digite um título para buscar..."
+          value={filter} 
+          onChange={(event) => setFilter()}
         />
-        <button id="button-search" onclick="searchTip ()">
+        <button id="button-search" onClick={searchTip} >
           Procurar
         </button>
-        <button id="button-delete" onclick="cleanSearch(); showTips()">
+        <button id="button-delete" onClick="cleanSearch(); showTips()">
           Limpar
         </button>
       </div>
